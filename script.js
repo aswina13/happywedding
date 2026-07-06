@@ -8,9 +8,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 2. Complete Countdown Timer
-// Set the wedding date here
-const weddingDate = new Date("Dec 20, 2026 10:00:00").getTime();
+// 2. Updated Countdown Timer for September 6, 2026
+const weddingDate = new Date("Sep 6, 2026 10:00:00").getTime();
 
 const countdownTimer = setInterval(() => {
     const now = new Date().getTime();
@@ -19,8 +18,6 @@ const countdownTimer = setInterval(() => {
     // Math calculations for days, hours, minutes and seconds
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    
-    // Here is the completed math that got cut off previously!
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -37,7 +34,7 @@ const countdownTimer = setInterval(() => {
     }
 }, 1000);
 
-// 3. Reveal Elements on Scroll (Immersive Animation)
+// 3. Reveal Elements on Scroll
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
     
@@ -53,6 +50,4 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
-
-// Trigger reveal once on load in case elements are already in view
 reveal();
